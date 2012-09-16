@@ -1,5 +1,8 @@
 """ RsPy::msgs : loading messages """
 
+#check for correct protobuf-version
+import pkg_resources
+if pkg_resources.get_distribution("protobuf").version != "2.4.1": raise NameError('You need to have google.protobuf in version 2.4.1')
 # Message Definitions.
 from proto import core_pb2
 from proto import peers_pb2
